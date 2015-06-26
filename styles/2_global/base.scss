@@ -1,0 +1,43 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	BASIC BROWSER RESET
+//////////////////////////////////////////////////////////////////////////////*/
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+	font-family: $font-family-copy-fallback;
+	min-height: 100%;
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+}
+
+body, button, input, textarea, select, option, optgroup {
+	@include font-m;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl, 
+blockquote, p, address, legend, 
+table, 
+fieldset, figure, img,
+pre {
+	margin: 0 0 $line-height-m 0;
+}
+
+hr {
+	height: 0;
+	border: 0;
+	border-top: 1px solid;
+	margin-bottom: $line-height-m - 1px;
+}

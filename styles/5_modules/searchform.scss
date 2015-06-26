@@ -1,0 +1,44 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	SEARCHFORM
+//////////////////////////////////////////////////////////////////////////////*/
+
+.searchform {
+	@include clearfix;
+	.searchform-text {
+		float: left;
+		width: calc(100% - 40px);
+	}
+	.searchform-submit {
+		width: 40px;
+		height: 40px;
+		float: right;
+		background: transparent;
+		&:hover {
+			color: $orange;
+		}
+	}
+}
+
+
+#search-block-form {
+	.conatiner-invisible {
+		@include clearfix;
+	}
+	.form-type-textfield {
+		float: left;
+		width: calc(100% - 40px);
+	}
+
+	.form-actions {
+		width: 40px;
+		height: 40px;
+		float: right;
+		
+	}
+	#edit-submit {
+		background: transparent;
+		&:hover {
+			color:orange;
+		}
+	}
+}

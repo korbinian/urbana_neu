@@ -1,0 +1,41 @@
+name = urbana
+description = custom theme for urbana-moebel.de
+package = Custom
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = styles/style.css
+
+stylesheets[all][] = styles/overrides/field.css
+stylesheets[all][] = styles/overrides/node.css
+stylesheets[all][] = styles/overrides/search.css
+
+stylesheets[all][] = styles/overrides/system.theme.css
+stylesheets[all][] = styles/overrides/system.menus.css
+stylesheets[all][] = styles/overrides/system.messages.css
+stylesheets[all][] = styles/overrides/classic.css
+stylesheets[all][] = styles/overrides/user.css
+stylesheets[all][] = styles/overrides/views.css
+stylesheets[all][] = styles/overrides/ctools.css
+
+
+
+
+regions[contact] = Contact
+regions[search] = Search
+regions[sidebar] = Sidebar
+regions[teaser] = Teaser
+regions[content] = Content
+regions[content_secondary] = Content Secondary
+regions[content_blog] = Content Blog
+regions[content_sidebar] = Content Sidebar
+regions[subnav] = Subnavigation
+regions[footer-1] = Footer 1
+regions[footer-2] = Footer 2
+regions[footer-3] = Footer 3
+regions[footer-contact] = Footer Contact
+
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+scripts[] = scripts/script.js

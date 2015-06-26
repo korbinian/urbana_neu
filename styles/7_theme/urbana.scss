@@ -1,0 +1,205 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	URBANA STYLES
+//////////////////////////////////////////////////////////////////////////////*/
+
+body, button, input, textarea, select, option, optgroup {
+	@include font-m;
+	font-family: $font-family-copy;
+}
+
+h1 {
+	@include font-xl;
+	font-family: $font-family-display;
+}
+
+h2, h3, h4, h5, h6 {
+	@include font-l;
+	font-family: $font-family-display;
+}
+
+a:hover {
+	color: $orange;
+}
+
+.checklist li:before {
+	color: $orange;
+	content: "\f00c";
+	display: inline-block;
+	font-family: $font-family-icons;
+	text-align: center;
+	width: 30px;
+}
+
+.menu li a {
+	sfont-weight: $font-weight-bold;
+	font-family: $font-family-display;
+}
+
+.site-sub {
+	h1, p {
+		margin: 0;
+	}
+}
+
+.site-header, .site-teaser {
+	background: #efece5;
+}
+
+.site-teaser-intro {
+
+
+	color: $dark;
+
+}
+
+.site-nav {
+
+	a {
+		background: rgba(255,255,255,.5);
+	}
+}
+
+.site-sidebar {
+	
+	width: 200px;
+	right: 60px;
+	h2 {
+		background: $dark;
+		color: $white;
+	}
+	ul {
+		background: $bg-gradient-dark;
+	}
+	a {
+		padding: 5px 10px !important;
+		color: $white;
+	}
+}
+
+
+.site-teaser-main, .site-teaser-main-produkt {
+	figcaption {
+		@include font-m;
+		color: $white;
+		background: rgba(0,0,0,.5);
+		a {
+			color: $orange;
+		}
+	}
+}
+
+.site-sub {
+	background: #efece5;
+}
+
+.site-subnav {
+	background: darken($grey-dark, 10%);
+	color: $grey;
+	a {
+		color: $orange;
+	}
+}
+
+.site-footer {
+	background: $background-footer;
+	color: $black;
+
+	input, textarea {
+		background: $dark;
+		color: $grey;
+		border-color: $black;
+	}
+	.fa {
+		display: inline-block;
+		width: 20px;
+	}
+}
+
+
+.tips {
+	max-width: 480px;
+	li {
+		margin-bottom: 10px;
+		padding-left: 40px;
+		&:before {
+			margin-left: -34px;
+		}
+	}
+}
+
+/*
+.site-footer .contact-form {
+	position: relative;
+	.form-item {
+		@include clearfix;
+		margin-bottom: 5px;
+		float: left;
+		width: 460px;
+		label {
+			float: left; 
+			width: 100px;
+			margin-right: 20px;
+		}
+		input, textarea {
+			padding: 0;
+			float: left;
+			width: 340px;
+			line-height: 20px;
+			background: rgba(0,0,0,0.2);
+			color: $grey-lighter;
+			box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
+			border: none;
+		}
+		textarea {
+			height: 100px;
+		}
+	}
+	.form-actions {
+		width: 220px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}*/
+
+.cta, .btn, button, input[type="submit"] {
+	font-family: $font-family-display;
+}
+
+.flower {
+	display: block;
+	position: absolute;
+	right: -60px;
+	bottom: -60px;
+	swidth: 130px;
+	sheight: 200px;
+	sbackground: red;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.field-name-field-teaser-call-to-action-sub {
+	padding: 10px 10px 0 10px;
+	max-width: 360px;
+}
+
+
+.site-teaser-intro ul {
+	@extend .checklist;
+}
+
+.site-teaser-intro {
+	h1, h2, p, ul {
+		margin-bottom: 10px;
+	}
+	
+}
+
+.call-to-action {
+	z-index: 20;
+}
+
+.site-teaser-main figcaption {
+	padding-left: 60px !important;
+}
+

@@ -1,0 +1,110 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	DEFAULT LAYOUT
+//////////////////////////////////////////////////////////////////////////////*/
+
+.row {
+	@include clearfix;
+    margin: 0 auto;
+	padding: 0 20px;
+    position: relative;
+    width: 100%;
+	width: $breakpoint-xl;
+/*
+	@media (min-width: $breakpoint-m) {
+        width: $breakpoint-m;
+    }
+    @media (min-width: $breakpoint-l) {
+        width: $breakpoint-l;
+    }
+    @media (min-width: $breakpoint-xl) {
+        width: $breakpoint-xl;
+    }*/
+}
+
+.box {
+	@include box;
+	@include clearfix;
+}
+
+.cols {
+	@include clearfix;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-full {
+	float: left;
+}
+
+.col-1 { width: 120px; }
+.col-2 { width: 240px; }
+.col-3 { width: 360px; }
+.col-4 { width: 480px; }
+.col-5 { width: 600px; }
+.col-6 { width: 720px; }
+.col-7 { width: 840px; }
+.col-8 { width: 960px; }
+.col-9 { width: 1080px; }
+.col-10 { width: 1200px; }
+.col-full {	width: 100%; }
+
+.site-header {
+	@include clearfix;
+	height: 130px;
+}
+
+	.site-branding {
+		float: left;
+		width: 480px;
+		height: 130px;
+	}
+
+	.site-search {
+		float: right;
+		width: 240px;
+		margin: 10px 0 40px 0;
+		height: 40px;
+		position: relative;
+	}
+
+	.site-contact {
+		float: left;
+		width: 720px;
+		margin: 10px 0 40px 0;
+	}
+
+	.site-nav {
+		float: left;
+		width: 720px;
+	}
+
+	.site-sidebar {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+		width: 240px;
+		z-index: 1;
+	}
+
+	.content-sidebar {
+		float:right;
+	}
+
+.site-teaser {
+	height: 490px;
+}
+
+.site-footer {
+	padding: 10px 0 20px 0;
+}
+
+/* STICKY FOOTER
+------------------------------------------------------------------------------*/
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.site-main {
+    flex: 1;
+}

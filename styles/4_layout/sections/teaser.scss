@@ -1,0 +1,22 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	SECTION SPECIFIC LAYOUT - TEASER
+//////////////////////////////////////////////////////////////////////////////*/
+
+
+
+.site-teaser-main, .site-teaser-main-produkt {
+	figure {
+		position: relative;
+		margin: 0;
+		figcaption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 500px;
+			padding: 0;
+			.field {
+				padding: 20px 20px 20px 20px;
+			}
+		}
+	}
+}

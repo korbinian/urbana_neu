@@ -1,0 +1,76 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	URBANA - TYPOOGRAPHY
+//////////////////////////////////////////////////////////////////////////////*/
+
+a {
+	color: $black;
+	text-decoration: none;
+	font-weight: $font-weight-bold;
+	border-bottom: 1px solid $black;
+	&:hover {
+		border-color: $orange;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		border: none;
+	}
+}
+
+
+.site-footer {
+	a {
+		border-color: $orange;
+		color: $orange;
+	}
+}
+
+.wf-loading {
+	body, button, input, textarea, select, option, optgroup {
+		font-family: arial, helvetica, sans serif;
+
+	}
+}
+
+
+
+
+
+b, strong {
+    font-weight: $font-weight-bold;
+}
+
+small {
+  font-size: $font-size-s;
+}
+
+sub, sup {
+	font-size: $font-size-s;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+
+.intro {
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.col-2 .intro {
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+}
+
+.col-1, .col-2 {
+	@include font-s;
+}

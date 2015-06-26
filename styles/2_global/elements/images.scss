@@ -1,0 +1,23 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	IMAGES
+//////////////////////////////////////////////////////////////////////////////*/
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+	border: 0;
+}
+
+figure {
+	img {
+		margin: 0;
+	}
+	figcaption {
+		padding: 5px 10px;
+	}
+}
+
+figcaption, figcaption * {
+	margin: 0;
+}

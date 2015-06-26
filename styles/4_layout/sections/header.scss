@@ -1,0 +1,27 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	SECTION SPECIFIC LAYOUT - HEADER
+//////////////////////////////////////////////////////////////////////////////*/
+
+.site-title-and-tagline {
+	@include visuallyhidden;
+}
+
+.site-logo-link {
+	border: none;
+}
+
+.site-logo {
+	margin: 0;
+}
+
+
+
+.site-contact {
+	padding: 10px;
+	text-align: right;
+	@include font-l;
+}
+
+.flower {
+	display: none;
+}

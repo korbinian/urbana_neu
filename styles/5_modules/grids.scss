@@ -1,0 +1,47 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	IMAGEGRID
+//////////////////////////////////////////////////////////////////////////////*/
+
+.grid {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-left: -10px;
+	font-size: 0;
+	width: calc(100% + 20px);
+	smargin-right: 0;
+	.griditem {
+		@include font-m;
+		smargin-left: 20px;
+		smargin-bottom: 10px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	figure {
+		margin: 0;
+	}
+	figcaption {
+		text-align: center;
+	}
+	a {
+		display: block;
+		border: 10px solid transparent;
+		border-bottom: 0 solid;
+		&:hover {
+			background: $grey;
+		}
+	}
+}
+
+.grid-2 {
+	.griditem {
+		width: 240px;
+		swidth: 33.333%;
+	}
+}
+
+.grid-1 {
+	.griditem {
+		width: 120px;
+	}
+}

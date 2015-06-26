@@ -1,0 +1,570 @@
+
+@import '1_setup/variables'; 
+@import '1_setup/functions';
+@import '1_setup/mixins';
+
+
+@import '2_global/base';
+
+	@import '2_global/elements/text';
+	@import '2_global/elements/links';
+	@import '2_global/elements/images';
+	@import '2_global/elements/quotes';
+	@import '2_global/elements/lists';
+	@import '2_global/elements/nav';
+	@import '2_global/elements/forms';
+	@import '2_global/elements/buttons';
+	@import '2_global/elements/tables';
+
+@import '2_global/print';
+
+/*//////////////////////////////////////////////////////////////////////////////
+	HELPER- & GENERIC CLASSES
+//////////////////////////////////////////////////////////////////////////////*/
+
+@import '3_helpers/utilities';
+//@import '3_helpers/debug';
+
+/*//////////////////////////////////////////////////////////////////////////////
+	LAYOUT
+//////////////////////////////////////////////////////////////////////////////*/
+
+@import '4_layout/default';
+
+@import '4_layout/sections/header';
+@import '4_layout/sections/nav';
+@import '4_layout/sections/teaser';
+@import '4_layout/sections/content';
+@import '4_layout/sections/sub';
+@import '4_layout/sections/subnav';
+@import '4_layout/sections/footer';
+
+@import '4_layout/pages/front';
+@import '4_layout/pages/produkt';
+@import '4_layout/pages/einrichtungsbeispiel';
+
+/*//////////////////////////////////////////////////////////////////////////////
+	MODULES
+//////////////////////////////////////////////////////////////////////////////*/
+
+@import '5_modules/accordion';
+@import '5_modules/grids';
+@import '5_modules/slider';
+@import '5_modules/tabs';
+@import '5_modules/searchform';
+
+/*//////////////////////////////////////////////////////////////////////////////
+	EXTERNAL LIBRARIES AND OVERWRITES
+//////////////////////////////////////////////////////////////////////////////*/
+
+@import '6_lib/drupal';
+@import '6_lib/fontawesome';
+
+/*//////////////////////////////////////////////////////////////////////////////
+	THEME
+//////////////////////////////////////////////////////////////////////////////*/
+
+@import '7_theme/urbana';
+
+/*//////////////////////////////////////////////////////////////////////////////
+	TEMP
+//////////////////////////////////////////////////////////////////////////////*/
+
+.garantie {
+	margin-top: 20px;
+	padding: 10px;
+	img {
+		width: 120px;
+	}
+}
+
+.site-content .block-title {
+	margin-bottom: 20px;
+}
+
+////// aktuelles
+
+.view-aktuelles {
+	sbackground: red;
+	.view-content {
+		margin-left: -10px;
+		width: calc(100% + 20px);
+		@include clearfix;
+		.views-row {
+			float: left;
+			width: 240px;
+			padding: 10px;
+			.views-field-field-zusammenfassung {
+				@include font-s;
+				p {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+//////
+
+.site-sub h2 {
+	margin: 0;
+	text-transform: uppercase;
+	@include font-m;
+	font-weight: bold;
+}
+
+.site-content {
+	margin-bottom: 40px;
+}
+
+.nav-produkte .block-title {
+	padding: 10px;
+}
+
+.field-name-field-col-right {
+	margin-bottom: 20px;
+}
+
+.page-title {
+	margin-bottom: 10px;
+}
+
+.site-teaser-intro {
+	float: left; 
+	width: 500px;
+	height: 490px;
+	margin-left: -20px;
+	padding: 30px 20px 80px 30px;
+	position: relative;
+	.call-to-action {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		left: 30px;
+	}
+}
+
+.site-sidebar {
+	.block-title {
+		padding: 10px;
+	}
+}
+
+.site-teaser-main {
+	float: right;
+	width: 980px;
+	height: 490px;
+	margin-right: -20px;
+	position: relative;
+}
+
+.site-main {
+	position: relative;
+}
+
+.meta {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+.site-content {
+	padding-top: 20px;
+}
+
+.front .page-title {
+	display: none;
+}
+
+.site-sidebar a:hover {
+	background: $dark;
+}
+
+.site-sidebar a.active-trail {
+	background: $orange;
+}
+
+.node-type-seite .site-sidebar .menu {
+	display: none;
+}
+
+.node-type-landing-page-produkt .site-sidebar .menu {
+	display: none;
+}
+
+.node-type-landing-page-produkt .site-sidebar:hover .menu {
+	display: block;
+}
+
+.node-type-seite .site-sidebar:hover .menu {
+	display: block;
+}
+
+.nav-produkte {
+	margin-bottom: 40px;
+	li {
+		float: none;
+
+	}
+	a {
+		padding: 0px 10px !important;
+	}
+	ul ul {
+		display: none;
+		a {
+			padding-left: 20px !important;
+		}
+	}
+}
+
+details {
+	sbackground: red;
+	padding-left: 16px;
+	@include font-s;
+	margin-bottom: 10px;
+	summary {
+		cursor: pointer;
+		sbackground: green;
+
+		margin-left: -16px;
+		margin-bottom: 10px;
+		@include font-m;
+	}
+}
+
+#user-login-form {
+	padding: 0 10px;
+	a {
+		border-bottom: 1px solid;
+		display: inline;
+		padding: 0 !important;
+		margin-left: 10px;
+		@include font-s;
+	}
+	.form-actions {
+		margin-top: 10px;
+		input {
+			padding: 5px 10px;
+		}
+	}
+	.form-item {
+		margin-bottom: 0;
+		input {
+			padding: 3px 9px;
+			border-color: $grey;
+		}
+	}
+}
+
+
+p.intro {
+	@include font-l;
+	line-height: 25px;
+	font-weight: normal;
+}
+
+/*
+
+.contextual-links-region {
+	max-width: 1480px;
+}
+
+.panel-frontpage {
+	.panels-flexible-row {
+		padding: 0;
+	}
+	.site-teaser {
+		height: 490px;
+		width: 4000px;
+		padding-left: 1300px !important;
+		margin-left: -1300px !important;
+	}
+	.site-teaser-intro {
+		height: 490px;
+		width: 500px;
+		
+		margin-left: -20px;
+		padding: 20px 20px 40px 30px;
+	}
+	.site-teaser-main {
+		height: 490px;
+		
+	}
+
+	.panels-flexible-row-panel-frontpage-4 {
+		background: red;
+		width: 1440px;
+		.panels-flexible-region-panel-frontpage-left .inside {
+			padding: 10px;
+		}
+		.panels-flexible-region-panel-frontpage-right .inside {
+			padding: 10px;
+		}
+	}
+}
+
+*/
+
+
+/*
+
+article {
+	header {
+		margin-bottom: 20px;
+	}
+}
+
+.garantie {
+	position: relative;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 120px;
+}
+
+.site-subnav {
+	@include font-s;
+	background: darken($grey-dark, 10%);
+	color: $white;
+	padding: 10px 0;
+	a {
+		color: $orange;
+		border-color: $orange
+	}
+	.row * {
+		margin: 0;
+	}
+}
+
+.gm-style-cc {
+	display: none !important;
+}
+
+.site-nav {
+	padding-left: $padding-m;
+	z-index: 12;
+  	position: relative;
+	.menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+	li:hover {
+		background: $white  !important;
+	}
+	a {
+		background: $grey-lighter;
+		color: $black;
+		&:hover {
+			background: $white;
+		}
+	}
+	li.active a {
+		background: $white;
+	}
+}
+
+.site-sidebar {
+	
+	z-index: 999999;
+	background: $bg-gradient-dark;
+	.block-title {
+			color: $white;
+		}
+	.menu {
+		padding: 10px 0;
+		li {
+			a {
+				color: $white;
+				line-height: 30px;
+				&:hover {
+					background: $orange;
+				}
+			}
+		}
+		li.active a {
+			background: $orange;
+			color: $white;
+		}
+	}
+} 
+
+.site-teaser {
+	background: $grey-dark;
+	position: relative;
+	z-index: 10;
+	.site-teaser-intro {
+		background: $bg-gradient-dark;
+		padding: $padding-xl $padding-l $padding-xl 40px;
+		position: relative;
+		z-index: 12;
+		color: white;
+		b {
+			color: $orange;
+			text-transform: uppercase;
+		}
+		.flower {
+			position: absolute;
+			bottom: -30px;
+			right: -80px;
+			width: 200px;
+			display: none;
+		}
+		a {
+			scolor: $orange;
+		}
+		p {
+			margin-bottom: 5px;
+		}
+		h2 {
+			scolor: $orange;
+		}
+		h1, h2 {
+			margin-bottom: 10px;
+
+		}
+		.cta {
+			margin-bottom: 10px;
+		}
+		.cta-sub {
+			padding: 5px 20px;
+    background: rgba(0,0,0,.2);
+    display: inline-block;
+    a {
+        color: #fff;
+        border: none;
+    }
+}
+	}
+	.site-teaser-main {
+		margin-right: -20px;
+		img {
+			width: 100%;
+			opacity: 1;
+			transition: opacity 1s;
+		}
+	}
+}
+
+.site-teaser-main {
+	position: relative;
+	figure {
+		position: relative;
+		figcaption {
+			background: rgba(255,255,255,.5);
+			position:  absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 20px;
+			stext-align: right;
+			spadding-left: 80px;
+			padding-right: 270px;
+		}
+		a {
+			color: $black;
+			sfont-weight: $font-weight-normal;
+			aborder-bottom: 1px solid $black;
+			.fa {
+				color: $orange
+			}
+		}
+	}
+	.teaser-nav {
+		display: none;
+		font-size: 0;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		a {
+			display: inline-block;
+			font-size: 30px;
+
+			padding: 20px;
+			color: $black;
+		}
+	}
+}
+
+.site-teaser-main:before {
+	content: "";
+  background: url(../images/vorhang.svg);
+  position: absolute;
+  top: 0;
+  left: -130px;
+  display: block;
+  width: 240px;
+  height: 440px;
+  z-index: 7;
+  pointer-events: none;
+  display: none;
+}
+
+.site-sub {
+	background: $background-header;
+	background: #efece5;
+}
+
+.site-footer {
+	background: $background-footer;
+	.row * {
+		margin: 0;
+	}
+	.fa {
+		font-weight: light;
+		width: 20px;
+		font-size: $font-size-m;
+		text-align: right;
+	}
+}
+
+*/
+
+/*
+
+.site-main {
+	padding: 30px 0;
+	min-height: calc(100vh - 140px);
+}
+
+.site-main .row {
+	@include clearfix;
+	.site-content {
+		width: 1200px;
+		float: left;
+	}
+	.site-aside {
+		width: 240px;
+		float: right;
+	}
+}
+
+
+.site-footer {
+	padding: 20px 0;
+}
+.site-footer .row {
+
+	color: $white;
+	@include font-s;
+	@include clearfix;
+
+}
+
+*/
+
+
+/*
+
+.site-header {
+	background: $background-header;
+	position: relative;
+}
+
+
+.site-branding {
+	z-index: 11;
+ 	position: relative;
+}
+
+*/

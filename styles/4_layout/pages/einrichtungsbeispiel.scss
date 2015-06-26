@@ -1,0 +1,80 @@
+.einrichtungsbeispiel-title {
+	margin: 0;
+	font-weight: normal;
+	color: $blue
+}
+
+.einrichtungsbeispiel-details {
+	color: $grey-dark;
+	top: -20px;
+	margin-bottom: 20px;
+	position: relative;
+	* {
+		display: inline-block;
+	}
+}
+
+.field-name-field-spalte-1 {
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+}
+
+.field-name-field-spalte-2 {
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+}
+
+.field-name-field-spalte-3 {
+	font-size: $font-size-s;
+	line-height: $line-height-s;
+}
+
+.field-type-taxonomy-term-reference {
+	@include clearfix;
+	margin-bottom: 20px;
+	.field-items {
+		.field-item {
+			float: left;
+			margin-right: 4px;
+			@include font-s;
+		}
+	}
+}
+
+
+// grid
+
+.einrichtungsbeispiele {
+
+	.block-title {
+		@extend .visuallyhidden;
+	}
+	.view {
+		.view-content {
+			sbackground: red;
+			margin-left: -10px;
+			width: calc(100% + 20px);
+			@include clearfix;
+			.views-row {
+				float: left;
+				width: 240px;
+				padding: 10px;
+				a {
+					border: none;
+				}
+				img {
+					margin: 0 0 5px 0;
+
+				}
+				.views-field-title {
+					@include font-m;
+					text-align: center;
+				}
+				.views-field-field-keywords {
+					@include font-s;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

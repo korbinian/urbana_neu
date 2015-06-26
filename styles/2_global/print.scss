@@ -1,0 +1,52 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	PRINT STYLES
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media print {
+
+body { 
+	width: 100% !important;
+	color: $black !important; 
+	background: none;
+}
+
+video,audio, object {
+	display: none
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	page-break-after: avoid; 
+}
+
+p, h1, h2, h3 { 
+	orphans: 3; 
+	widows: 3; 
+}
+
+a:link[href^="http://"]:after, a[href^="http://"]:visited:after { 
+	content: " (" attr(href) ") "; 
+}
+
+abbr[title]:after { 
+	content: " (" attr(title) ")"; 
+}
+
+a[href^="http://"] {
+	color: $black; }
+
+a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".gif"]:after, a[href$=".png"]:after { 
+	content: " (" attr(href) ") "; 
+	display: none; }
+
+a[href^="#"]:after, a[href^="javascript:"]:after {
+	content: "";
+}
+
+img,tr {
+	page-break-inside: avoid;
+} 
+
+}
+
+
+

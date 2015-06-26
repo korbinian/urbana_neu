@@ -1,0 +1,71 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	BUTTONS
+//////////////////////////////////////////////////////////////////////////////*/
+
+button, .btn, input[type="submit"], input[type='button'], input[type='reset'] {
+	display: inline-block;
+	width: auto;
+	padding: 10px;
+
+	border: 0 solid;
+	cursor: pointer;
+
+	font-family: $font-family-display-fallback;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-m;
+	text-transform: uppercase;
+	text-align: center;
+	
+	color: $black;
+	background: $grey;
+	&:hover {
+		background: $grey-dark;
+		color: $white;
+	}
+}
+
+button[disabled], html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.btn.cta, .btn.orange {
+	background: $orange;
+	color: $orange-dark;
+	&:hover {
+		background: lighten($orange, 10%);
+		color: $black;
+	}
+}
+
+.btn.red {
+	background: $red;
+	color: $red-dark;
+	&:hover {
+		background: lighten($red, 10%);
+		color: $black;
+	}
+}
+
+.btn.green {
+	background: $green;
+	color: $green-dark;
+	&:hover {
+		background: lighten($green, 10%);
+		color: $black;
+	}
+}
+
+.btn.blue {
+	background: $blue;
+	color: $blue-light;
+	&:hover {
+		background: lighten($blue, 10%);
+		color: $white;
+	}
+}
+

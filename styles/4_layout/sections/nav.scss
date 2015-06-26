@@ -1,0 +1,68 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	SECTION SPECIFIC LAYOUT - NAVIGATION
+//////////////////////////////////////////////////////////////////////////////*/
+
+.site-nav {
+	.menu, .links {
+		margin: 0;
+		float: right;
+		li {
+			float: left;
+			a {
+				display: block;
+
+			}
+			&:hover .menu {
+				display: block !important;
+				z-index: 4;
+			}
+		}
+		li:hover a {
+			background: $white;
+			color: $black;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.menu .menu {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		display: none;
+		a {
+			padding-right: 0;
+			@include font-s;
+		}
+		.last a {
+			padding-right: 10px;
+
+		}
+	}
+}
+
+.site-subnav {
+	.menu {
+		margin: 0;
+		@include clearfix;
+		li {
+			float: left;
+			a {
+
+				display: block;
+			}
+		}
+	}
+}
+
+
+li.active-trail a {
+	background: $white;
+
+}
+
+li.active-trail .menu {
+	display: block !important;
+	z-index: 5;
+}

@@ -1,0 +1,108 @@
+$col-s:	200px;
+$col:   240px;
+
+$gutter: 				20px;
+
+$breakpoint-xs: 520px;
+$breakpoint-s:  760px;
+$breakpoint-m:  1000px;
+$breakpoint-l:  1240px;
+$breakpoint-xl: 1480px;
+
+// TYPOGRAPHY
+
+$font-family-display: "Montserrat", Arial, Helvetica, sans-serif;
+$font-family-copy: "Montserrat", Arial, Helvetica, sans-serif;
+$font-family-code: Consolas;
+$font-family-icons: FontAwesome;
+$font-family-display-fallback: Arial, Helvetica, sans-serif;
+$font-family-copy-fallback: Arial, Helvetica, sans-serif;
+
+$font-size-xl: 30px;
+$font-size-l: 20px;
+$font-size-m: 15px;
+$font-size-s: 12px;
+
+$line-height-xl: 30px;
+$line-height-l: 20px;
+$line-height-m: 20px;
+$line-height-s: 15px;
+
+$font-weight-bold: bold;
+$font-weight-normal: normal;
+
+// COLORS
+
+$black: black;
+$white: white;
+$grey: #eee;
+
+
+$grey-lighter: rgba(255,255,255,0.7);
+$grey-light: grey;
+$grey-dark: #463c3c;
+$grey-darker: #463c3c;
+
+
+$orange: orange;
+$brown: #a45503;
+
+$white:					rgb(255,255,255);
+$gray-light:			rgb(238,238,238);
+$gray:					rgb(212,212,212);
+$gray-dark:				rgb(69,62,63);
+$gray-darker:			rgb(42,38,38);
+$dark:                  rgb(70,60,60);
+$black:					rgb(0,0,0);
+$red:					rgb(231,65,54);
+$red-light:				rgb(255,188,183);
+$red-dark:				rgb(72,13,9);
+$blue:					rgb(20,84,151);
+$blue-light:			rgb(221,238,255);
+$blue-dark: 			rgb(4,46,90);
+$green:					rgb(99,163,17);
+$green-light:			rgb(201,248,140);
+$green-dark:			rgb(38,67,2);
+$green-dark:            darken($green, 30%);
+$orange:				rgb(255,171,15);
+$orange: rgb(255, 161, 10);
+$orange-light:			rgb(255,223,163);
+$orange-dark:			rgb(112,72,0);
+$orange-dark:           darken($orange, 35%);
+$mute:					rgba(255,255,255,.4);
+$mute-dark:             rgba(0,0,0,.8);
+
+$lime:					$orange;
+
+$text-color:            $gray-darker;
+$link-color:            #a45503;
+$border-color: 			$gray-dark;
+
+$bg-gradient-light: #eee radial-gradient(ellipse at top left, #eee 0%, #e1e1e1 70%);
+$bg-gradient-dark: #463c3c radial-gradient(ellipse at top left, #6e6464 0%, #463c3c 70%);
+
+$background-header: $bg-gradient-light;
+$background-footer: $bg-gradient-dark;
+
+$yellow: #ffae03;
+$orange: #e67f0d;
+$orange: $yellow;
+
+
+// SIZES
+
+$padding-xl: 40px;
+$padding-l: 20px;
+$padding-m: 10px;
+$padding-s: 5px;
+
+$baseline: 20px;
+
+
+// BORDERS
+
+$border:				1px solid $gray;
+$border-radius: 		2px;
+
+
+$font-weight-black:     700;

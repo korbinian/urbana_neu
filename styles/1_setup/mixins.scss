@@ -1,0 +1,87 @@
+@mixin font-s()  {
+	font-size: $font-size-s;
+	line-height: $line-height-s;
+	font-weight: $font-weight-normal;
+}
+
+@mixin font-m()  {
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+	font-weight: $font-weight-normal;
+}
+
+@mixin font-l()  {
+	font-size: $font-size-l;
+	line-height: $line-height-l;
+	font-weight: $font-weight-bold;
+}
+
+@mixin font-xl()  {
+	font-size: $font-size-xl;
+	line-height: $line-height-xl;
+	font-weight: $font-weight-bold;
+}
+
+@mixin visuallyhidden() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin clearfix() {
+	&:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	  }
+}
+
+@mixin box() {
+	padding: 10px;
+}
+
+
+ ///
+ /// Viewport sized typography with minimum and maximum values
+ ///
+ /// @author Eduardo Boucas (@eduardoboucas)
+ ///
+ /// @param {Number}   $responsive  - Viewport-based size
+/// @param {Number}   $min         - Minimum font size (px)
+/// @param {Number}   $max         - Maximum font size (px)
+///                                  (optional)
+/// @param {Number}   $fallback    - Fallback for viewport-
+///                                  based units (optional)
+///
+/// @example scss - 5vw font size (with 50px fallback), 
+///                 minumum of 35px and maximum of 150px
+///  @include responsive-font(5vw, 35px, 150px, 50px);
+///
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+ }

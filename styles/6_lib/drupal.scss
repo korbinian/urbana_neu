@@ -1,0 +1,148 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	DRUPAL
+//////////////////////////////////////////////////////////////////////////////*/
+
+.block-title {
+	spadding: 10px;
+	font-size: $font-size-m;
+	margin: 0;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.site-footer .block {
+	@include box;
+}
+
+.contextual-links a {
+	border: none;
+}
+
+.description {
+    @include font-s;
+    padding: 5px;
+}
+
+.pager {
+    @include clearfix;
+    li {
+        float: left;
+    }
+    li.pager-current, a {
+        padding: 5px;
+        display: block;
+        margin-right: 5px;
+        border: none;
+    }
+    .pager-last, .pager-first {
+        display: none;
+    }
+    .pager-current {
+        color: $orange;
+    }
+}
+
+#toolbar a {
+    font-weight: normal;
+    font-family: "Lucida Grande", Verdana, sans-serif;
+}
+
+
+// Panels
+
+/*
+
+.panels-flexible-four_eight .panels-flexible-region {
+  padding: 0;
+}
+
+.panels-flexible-four_eight .panels-flexible-region-inside {
+	
+}
+
+.panels-flexible-four_eight .panels-flexible-region-inside-first {
+  padding-left: 0;
+}
+
+.panels-flexible-four_eight .panels-flexible-region-inside-last {
+  padding-right: 0;
+}
+
+.panels-flexible-four_eight .panels-flexible-column {
+  padding: 0;
+}
+
+.panels-flexible-four_eight .panels-flexible-column-inside {
+  padding: 10px;
+  @include clearfix;
+}
+
+.panels-flexible-four_eight .panels-flexible-column-inside-first {
+	padding: 10px;
+}
+
+.panels-flexible-four_eight .panels-flexible-column-inside-last {
+	padding: 10px;
+}
+
+.panels-flexible-four_eight .panels-flexible-row {
+  padding: 0 0 0 0;
+  margin: 0;
+}
+
+.panels-flexible-four_eight .panels-flexible-row-last {
+  padding-bottom: 0;
+}
+
+.panels-flexible-column-four_eight-1 {
+  position: relative;
+  float: left;
+  background-color: transparent;
+  width: 480px;
+}
+
+.panels-flexible-column-four_eight-main {
+  float: left;
+
+}
+
+.panels-flexible-four_eight-inside {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.panels-flexible-four_eight-middle {
+  margin-left: 480px;
+}
+
+* html .panels-flexible-four_eight-left {
+  left: 480px;
+}
+
+.panel-flexible-admin .panels-flexible-four_eight-inside {
+  padding-left: 0px;
+}
+
+.panels-flexible-four_eight {
+  width: auto;
+}
+
+.panels-flexible-region-four_eight-left {
+  float: left;
+
+}
+
+.panels-flexible-row-four_eight-2-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-region-four_eight-center {
+  float: left;
+
+}
+
+.panels-flexible-row-four_eight-main-row-inside {
+  padding-right: 0px;
+}
+
+*/

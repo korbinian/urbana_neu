@@ -1,0 +1,38 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	TABLES
+//////////////////////////////////////////////////////////////////////////////*/
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border-top: 1px solid;
+}
+
+caption {
+	text-align: left;
+	font-weight: $font-weight-bold;
+	padding: 10px;
+}
+
+thead {
+
+}
+
+tbody {
+	width: 100%;
+}
+
+tfoot {
+
+}
+
+tr {
+	border-bottom: 1px solid;
+}
+
+th, td {
+	padding: 10px;
+	
+	text-align: left;
+}
