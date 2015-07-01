@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -32,7 +31,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'
+                    style: 'compact'
                 },
                 files: {
                     'styles/style.css': 'styles/style.scss',
@@ -48,18 +47,18 @@ module.exports = function(grunt) {
             styles: {
                 files: [
                     'styles/*.scss',
-                    'styles/1_setup/*.scss',
-                    'styles/2_global/*.scss',
-                    'styles/2_global/elements/*.scss',
-                    'styles/3_helpers/*.scss',
-                    'styles/4_layout/*.scss',
-                    'styles/4_layout/sections/*.scss',
-                    'styles/4_layout/pages/*.scss',
-                    'styles/5_modules/*.scss',
-                    'styles/6_lib/*.scss',
-                    'styles/7_theme/*.scss'
+                    'styles/setup/*.scss',
+                    'styles/global/*.scss',
+                    'styles/global/elements/*.scss',
+                    'styles/helpers/*.scss',
+                    'styles/layout/*.scss',
+                    'styles/layout/sections/*.scss',
+                    'styles/layout/pages/*.scss',
+                    'styles/modules/*.scss',
+                    'styles/lib/*.scss',
+                    'styles/theme/*.scss'
                 ],
-                tasks: ['sass', 'autoprefixer', 'cssmin'],
+                tasks: ['sass', 'autoprefixer'],
                 options: {
                     livereload: true,
                 },
@@ -67,16 +66,13 @@ module.exports = function(grunt) {
             scripts: {
                 files: ['scripts/*.js'],
                 tasks: ['concat', 'uglify']
-            },
-            sync: {
-            	files: ['**'],
-            	tasks: ['sync']
             }
         },
         sync: {
             main: {
                 files: [{
                     src: [
+                        'scripts/script.js',
                         'scripts/script.min.js',
                         'styles/style.css',
                         'templates/**',

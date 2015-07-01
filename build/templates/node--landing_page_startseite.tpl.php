@@ -34,7 +34,7 @@
 					<?php print render($content['field_col_right_front']); ?>
 				</div>
 			</div>
-			<div class="col-2 content-sidebar">
+			<div class="col-2">
 				<nav class="nav-produkte">
 					<?php print render($region['content_sidebar']); ?>
 				</nav>
