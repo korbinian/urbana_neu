@@ -51,12 +51,10 @@ module.exports = function(grunt) {
                     'styles/global/*.scss',
                     'styles/global/elements/*.scss',
                     'styles/helpers/*.scss',
-                    'styles/layout/*.scss',
-                    'styles/layout/sections/*.scss',
-                    'styles/layout/pages/*.scss',
+                    'styles/sections/*.scss',
+                    'styles/pages/*.scss',
                     'styles/modules/*.scss',
-                    'styles/lib/*.scss',
-                    'styles/theme/*.scss'
+                    'styles/lib/*.scss'
                 ],
                 tasks: ['sass', 'autoprefixer'],
                 options: {

@@ -19,6 +19,21 @@
 						<?php print render($content['field_spalte_1']); ?>
 						<?php print render($content['field_spalte_2']); ?>
 						<?php print render($content['field_spalte_3']); ?>
+
+					</div>
+
+					<div class="einrichtungsbeispiel-taxonomies">
+						<h2>Informationen</h2>
+						<h3>Wohnbereich:</h3>
+						<?php print render($content['field_wohnbereich']); ?>
+						<h3>Stil:</h3>
+						<?php print render($content['field_stil']); ?> 
+						<h3>Abgebildete Produkte:</h3>
+                    	<?php print render($content['field_produkte']); ?>
+						<h3>Abgebildete Materialien:</h3>
+                    	<?php print render($content['field_materialien']); ?> 
+						<h3>Technische Besonderheiten:</h3>
+                    	<?php print render($content['field_besonderheiten']); ?> 
 					</div>
 
 				</div>
@@ -26,13 +41,7 @@
 			<div class="col-6">
 				<div class="box">
 					<?php print render($content['field_hauptbild']); ?> 
-					<div class="einrichtungsbeispiel-taxonomies">
-						<?php print render($content['field_wohnbereich']); ?> 
-                    <?php print render($content['field_produkte']); ?> 
-                    <?php print render($content['field_stil']); ?> 
-                    <?php print render($content['field_materialien']); ?> 
-                    <?php print render($content['field_besonderheiten']); ?> 
-					</div>
+					
 				</div>
 			</div>
 		</div>

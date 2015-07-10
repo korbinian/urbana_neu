@@ -18,9 +18,13 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, address, legend, table, field
 
 h1 { font-size: 30px; line-height: 30px; font-weight: bold; font-family: "Montserrat", Arial, Helvetica, sans-serif; }
 
-h2, h3, h4, h5, h6 { font-size: 20px; line-height: 20px; font-weight: bold; font-family: "Montserrat", Arial, Helvetica, sans-serif; }
+h2, h3 { font-size: 20px; line-height: 20px; font-weight: bold; font-family: "Montserrat", Arial, Helvetica, sans-serif; }
 
-p.intro { font-size: 20px; line-height: 20px; font-weight: bold; line-height: 25px; font-weight: normal; }
+h4, h5, h6 { font-size: 15px; line-height: 20px; font-weight: normal; font-weight: bold; font-family: "Montserrat", Arial, Helvetica, sans-serif; }
+
+h1 b, h2 b, h3 b, h4 b, h5 b, h6 b { color: #145497; }
+
+p.intro { font-size: 15px; line-height: 20px; font-weight: normal; line-height: 20px; font-weight: normal; }
 
 hr { height: 0; border: 0; border-top: 1px solid; margin-bottom: 19px; }
 
@@ -38,18 +42,27 @@ sub { bottom: -0.25em; }
 
 .col-1, .col-2 { font-size: 12px; line-height: 15px; font-weight: normal; }
 
+q { quotes: "" " " ""; }
+
+q:before { content: open-quote; }
+
+q:after { content: close-quote; }
+
 /*//////////////////////////////////////////////////////////////////////////////
 LINKS
 //////////////////////////////////////////////////////////////////////////////*/
-a { position: relative; text-decoration: none; border-bottom: 1px solid; font-weight: bold; color: #463c3c; }
-a:visited { color: #463c3c; }
-a:active { top: 1px; }
-a:hover { color: #ffae03; border-color: #ffae03; }
+a, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2 { position: relative; text-decoration: none; border-bottom: 1px solid #d8d3ca; color: #463c3c; }
+a:visited, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:visited { color: #463c3c; }
+a:active, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:active { top: 1px; }
+a:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover { color: #ffae03; border-color: #ffae03; }
+a:hover:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover:after { color: #ffae03 !important; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { border: none; }
+a[href$='.pdf']:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href$='.pdf']:after { content: " \f1c1"; font-family: FontAwesome; position: relative; color: #d8d3ca; }
 
-.site-subnav a, .site-footer a { border-color: #ffae03; color: #ffae03; }
-.site-subnav a:hover, .site-footer a:hover { color: #fffcfc; border-color: #fffcfc; }
+h1 a, h1 .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference h1 h2, h2 a, h2 .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2 h2, h3 a, h3 .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference h3 h2, h4 a, h4 .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference h4 h2, h5 a, h5 .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference h5 h2, h6 a, h6 .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference h6 h2 { border: none; }
+
+.site-subnav a, .site-subnav .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-subnav h2, .site-footer a, .site-footer .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-footer h2 { border-color: #ffae03; color: #ffae03; }
+.site-subnav a:hover, .site-subnav .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-subnav h2:hover, .site-footer a:hover, .site-footer .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-footer h2:hover { color: #fffcfc; border-color: #fffcfc; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 IMAGES
@@ -57,7 +70,7 @@ IMAGES
 img, svg { max-width: 100%; height: auto; vertical-align: bottom; border: 0; }
 
 figure img { margin: 0; }
-figure figcaption { padding: 5px 10px; }
+figure figcaption { padding: 5px 0; }
 
 figcaption, figcaption * { margin: 0; }
 
@@ -73,7 +86,20 @@ LISTS
 //////////////////////////////////////////////////////////////////////////////*/
 ul, ol { padding: 0; list-style: none; }
 
-.checklist li:before, .site-teaser-intro ul li:before { color: #ffae03; content: "\f00c"; display: inline-block; font-family: FontAwesome; text-align: center; width: 30px; }
+.checklist li, .site-teaser-intro ul li { margin-bottom: 5px; }
+
+.site-teaser-intro .checklist, .site-teaser-intro ul { padding-left: 30px; padding-right: 20px; }
+.site-teaser-intro .checklist li, .site-teaser-intro ul li { margin-bottom: 0; }
+
+.checklist li:before, .site-teaser-intro ul li:before { color: #ffae03; content: "\f00c"; display: inline-block; font-family: FontAwesome; text-align: center; width: 20px; margin-left: -20px; }
+
+.site-teaser-intro .checklist li:before, .site-teaser-intro ul li:before { width: 30px; margin-left: -30px; }
+
+dt { font-weight: bold; }
+
+dd { margin: 0 0 10px 0; font-size: 12px; line-height: 15px; font-weight: normal; }
+
+ol { list-style: decimal; padding: 0 20px; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 NAVIGATION
@@ -82,11 +108,13 @@ nav, .menu, .links { margin: 0; padding: 0; }
 nav:after, .menu:after, .links:after { content: ""; display: table; clear: both; }
 nav ul, nav ol, .menu ul, .menu ol, .links ul, .links ol { margin: 0; }
 nav li, .menu li, .links li { list-style: none; margin: 0; padding: 0; }
-nav a, .menu a, .links a { border: none; display: block; padding: 10px; font-family: "Montserrat", Arial, Helvetica, sans-serif; }
+nav a, nav .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference nav h2, .menu a, .menu .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .menu h2, .links a, .links .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .links h2 { border: none; display: block; padding: 10px; font-family: "Montserrat", Arial, Helvetica, sans-serif; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 FORMS
 //////////////////////////////////////////////////////////////////////////////*/
+form { width: 100%; }
+
 fieldset { border: 0 solid; padding: 0; }
 
 legend { font-weight: bold; padding: 0; }
@@ -98,7 +126,9 @@ label { cursor: pointer; }
 
 input, textarea { border: 1px solid #463c3c; padding: 9px; width: 100%; }
 
-input[type="checkbox"], input[type="radio"] { padding: 0; }
+input[type="image"] { border: none; }
+
+input[type="checkbox"], input[type="radio"] { padding: 0; width: auto; }
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
 
@@ -113,26 +143,28 @@ optgroup { font-weight: bold; }
 /*//////////////////////////////////////////////////////////////////////////////
 BUTTONS
 //////////////////////////////////////////////////////////////////////////////*/
-button, input[type="submit"], input[type='button'], input[type='reset'], .btn, .meta li a { display: inline-block; width: auto; padding: 10px; border: none; cursor: pointer; font-weight: bold; line-height: 20px; text-transform: uppercase; text-align: center; color: black; background: #d8d3ca; }
-button:hover, input[type="submit"]:hover, input[type='button']:hover, input[type='reset']:hover, .btn:hover, .meta li a:hover { background: #463c3c; color: #fffcfc; }
+button, input[type="submit"], input[type='button'], input[type='reset'], .btn, .meta li a, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2 { font-size: 15px; line-height: 20px; font-weight: normal; display: inline-block; width: auto; padding: 10px; border: none; cursor: pointer; font-weight: bold; line-height: 20px; text-transform: uppercase; text-align: center; color: black; background: #d8d3ca; margin-bottom: 20px; }
+button:hover, input[type="submit"]:hover, input[type='button']:hover, input[type='reset']:hover, .btn:hover, .meta li a:hover, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2:hover { background: #463c3c; color: #fffcfc; }
 
-.cta, .btn, .meta li a, button, input[type="submit"] { font-family: "Montserrat", Arial, Helvetica, sans-serif; }
+.col-2 button, .col-2 input[type="submit"], .col-2 input[type='button'], .col-2 input[type='reset'], .col-2 .btn, .col-2 .meta li a, .meta li .col-2 a, .col-2 .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference .col-2 h2, .col-2 .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li .col-2 h2, .meta button, .meta input[type="submit"], .meta input[type='button'], .meta input[type='reset'], .meta .btn, .meta li a, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2 { padding: 5px 10px; }
+
+.cta, .btn, .meta li a, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2, button, input[type="submit"] { font-family: "Montserrat", Arial, Helvetica, sans-serif; }
 
 button[disabled], html input[disabled] { cursor: default; }
 
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
-.btn.cta, .meta li a.cta, .btn.orange, .meta li a.orange { background: #ffae03; color: #704800; }
-.btn.cta:hover, .meta li a.cta:hover, .btn.orange:hover, .meta li a.orange:hover { background: #ffbe36; color: black; }
+.btn.cta, .meta li a.cta, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.cta, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.cta, .btn.orange, .meta li a.orange, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.orange, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.orange { background: #ffae03; color: #704800; }
+.btn.cta:hover, .meta li a.cta:hover, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.cta:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.cta:hover, .btn.orange:hover, .meta li a.orange:hover, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.orange:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.orange:hover { background: #ffbe36; color: black; }
 
-.btn.red, .meta li a.red { background: #e74136; color: #480d09; }
-.btn.red:hover, .meta li a.red:hover { background: #ec6c64; color: black; }
+.btn.red, .meta li a.red, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.red, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.red { background: #e74136; color: #480d09; }
+.btn.red:hover, .meta li a.red:hover, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.red:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.red:hover { background: #ec6c64; color: black; }
 
-.btn.green, .meta li a.green { background: #149737; color: #145437; }
-.btn.green:hover, .meta li a.green:hover { background: #1ac447; color: black; }
+.btn.green, .meta li a.green, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.green, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.green { background: #149737; color: #145437; }
+.btn.green:hover, .meta li a.green:hover, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.green:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.green:hover { background: #1ac447; color: black; }
 
-.btn.blue, .meta li a.blue { background: #145497; color: #ddeeff; }
-.btn.blue:hover, .meta li a.blue:hover { background: #1a6dc4; color: #fffcfc; }
+.btn.blue, .meta li a.blue, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.blue, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.blue { background: #145497; color: #ddeeff; }
+.btn.blue:hover, .meta li a.blue:hover, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.blue:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2.blue:hover { background: #1a6dc4; color: #fffcfc; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 TABLES
@@ -164,11 +196,11 @@ PRINT STYLES
   video, audio, object { display: none; }
   h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
   p, h1, h2, h3 { orphans: 3; widows: 3; }
-  a:link[href^="http://"]:after, a[href^="http://"]:visited:after { content: " (" attr(href) ") "; }
+  a:link[href^="http://"]:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:link[href^="http://"]:after, a[href^="http://"]:visited:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href^="http://"]:visited:after { content: " (" attr(href) ") "; }
   abbr[title]:after { content: " (" attr(title) ")"; }
-  a[href^="http://"] { color: black; }
-  a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".gif"]:after, a[href$=".png"]:after { content: " (" attr(href) ") "; display: none; }
-  a[href^="#"]:after, a[href^="javascript:"]:after { content: ""; }
+  a[href^="http://"], .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href^="http://"] { color: black; }
+  a[href$=".jpg"]:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href$=".jpg"]:after, a[href$=".jpeg"]:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href$=".jpeg"]:after, a[href$=".gif"]:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href$=".gif"]:after, a[href$=".png"]:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href$=".png"]:after { content: " (" attr(href) ") "; display: none; }
+  a[href^="#"]:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href^="#"]:after, a[href^="javascript:"]:after, .einrichtungsbeispiel-taxonomies .field-type-entityreference h2[href^="javascript:"]:after { content: ""; }
   img, tr { page-break-inside: avoid; } }
 /*//////////////////////////////////////////////////////////////////////////////
 UTILITY CLASSES
@@ -184,18 +216,18 @@ DRUPAL
 .site-footer .block { padding: 10px; }
 
 /* contextual links */
-.contextual-links a { border: none; }
+.contextual-links a, .contextual-links .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .contextual-links h2 { border: none; }
 
 /* description */
 .description { font-size: 12px; line-height: 15px; font-weight: normal; padding: 5px; }
 
 /* toolbar */
-#toolbar a { font-weight: normal; font-family: "Lucida Grande", Verdana, sans-serif; }
+#toolbar a, #toolbar .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference #toolbar h2 { font-weight: normal; font-family: "Lucida Grande", Verdana, sans-serif; }
 
 /* pager */
 .pager:after { content: ""; display: table; clear: both; }
 .pager li { float: left; }
-.pager li.pager-current, .pager a { padding: 5px; display: block; margin-right: 5px; border: none; }
+.pager li.pager-current, .pager a, .pager .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .pager h2 { padding: 5px; display: block; margin-right: 5px; border: none; }
 .pager .pager-last, .pager .pager-first { display: none; }
 .pager .pager-current { color: #ffae03; }
 
@@ -205,14 +237,56 @@ DRUPAL
 
 /* login form */
 #user-login-form { padding: 0 10px; }
-#user-login-form a { border-bottom: 1px solid; display: inline; padding: 0 !important; font-size: 12px; line-height: 15px; font-weight: normal; }
+#user-login-form a, #user-login-form .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference #user-login-form h2 { border-bottom: 1px solid; display: inline; padding: 0 !important; font-size: 12px; line-height: 15px; font-weight: normal; }
 #user-login-form .form-actions { margin-top: 10px; }
 #user-login-form .form-actions input { padding: 5px 10px; }
 #user-login-form .form-item { margin-bottom: 0; }
 #user-login-form .form-item input { padding: 3px 9px; border-color: #d8d3ca; }
 
 /* forms */
-.form-item { margin: 0 0 20px 0; }
+.form-item { margin: 0 0 10px 0; }
+
+/* meta */
+.meta .tabs li { padding: 0; }
+.meta .tabs li a, .meta .tabs li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta .tabs li h2 { margin-bottom: 0; }
+
+/* btn */
+form .button-primary { background: #ffae03; }
+
+/* draggable views */
+.views-form form { float: left; position: relative; }
+
+.draggableviews-processed:after { content: ""; display: table; clear: both; }
+
+.draggableviews-processed li.views-row { display: block; float: none; width: auto; margin: 0; padding: 0; cursor: move; opacity: 1; vertical-align: top; -webkit-transition: opacity 1s; transition: opacity 1s; spointer-events: none; }
+
+.draggableviews-processed li.views-row.ui-sortable-helper { border: none; top: auto !important; opacity: .2; -webkit-transition: opacity .2s; transition: opacity .2s; sbackground: #145497; }
+
+.draggableviews-processed li.views-row { border: none; }
+
+.draggableviews-weight { display: none; }
+
+.views-field-nid { display: none; }
+
+.tabledrag-toggle-weight-wrapper { display: none; }
+
+/* drag handle */
+.draggable a.tabledrag-handle, .draggable .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.tabledrag-handle, .einrichtungsbeispiel-taxonomies .field-type-entityreference .draggable h2.tabledrag-handle { cursor: move; float: left; height: 12px; margin-left: 0; overflow: hidden; text-decoration: none; border: none; padding: 2px; }
+.draggable a.tabledrag-handle .handle, .draggable .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.tabledrag-handle .handle, .einrichtungsbeispiel-taxonomies .field-type-entityreference .draggable h2.tabledrag-handle .handle { background-position: 0 0; margin: 0; padding: 0; height: 20px; width: 20px; }
+
+table.draggable td { padding: 0; }
+
+.tabledrag-changed-warning.messages { color: #e74136; padding: 10px; }
+
+.warning.tabledrag-changed { color: #e74136; font-weight: bold; }
+
+.nav-produkte .sort a, .nav-produkte .sort .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .nav-produkte .sort h2 { padding: 0 !important; }
+
+.sort tr { border-bottom: none; }
+
+.sort table { border-top: none; }
+
+.drag-previous { color: #e74136; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 FONTAWESOME
@@ -234,6 +308,16 @@ FONTAWESOME
 
 .fa-2x { font-size: 20px; }
 
+.fa-chevron-right:before { content: "\f054"; }
+
+.fa-chevron-down:before { content: "\f078"; }
+
+.fa-facebook-f:before, .fa-facebook:before { content: "\f09a"; }
+
+.fa-envelope:before { content: "\f0e0"; }
+
+.fa-file-pdf-o:before { content: "\f013"; }
+
 /*//////////////////////////////////////////////////////////////////////////////
 ACCORDION
 //////////////////////////////////////////////////////////////////////////////*/
@@ -246,19 +330,27 @@ ACCORDION
 details { padding-left: 16px; font-size: 12px; line-height: 15px; font-weight: normal; margin-bottom: 10px; }
 details summary { cursor: pointer; margin-left: -16px; margin-bottom: 10px; font-size: 15px; line-height: 20px; font-weight: normal; }
 
+.field-name-field-details h1 { display: inline-block; cursor: pointer; }
+.field-name-field-details h1:hover { color: #ffae03; }
+.field-name-field-details h1:before { content: "\f054 "; font-family: FontAwesome; display: inline-block; width: 20px; margin-left: -20px; }
+.field-name-field-details .open:before { content: " \f078 "; font-family: FontAwesome; display: inline-block; width: 20px; margin-left: -20px; }
+
 /*//////////////////////////////////////////////////////////////////////////////
 IMAGEGRID
 //////////////////////////////////////////////////////////////////////////////*/
 .grid { margin: 0; padding: 0; list-style: none; margin-left: -10px; font-size: 0; width: calc(100% + 20px); }
-.grid .griditem { font-size: 15px; line-height: 20px; font-weight: normal; display: inline-block; vertical-align: top; }
+.grid .griditem { font-size: 15px; line-height: 20px; font-weight: normal; display: inline-block; vertical-align: top; padding: 0 10px; }
 .grid figure { margin: 0; }
-.grid figcaption { text-align: center; }
-.grid a { display: block; border: 10px solid transparent; border-bottom: 0 solid; }
-.grid a:hover { background: #efece5; color: black; }
+.grid a, .grid .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .grid h2 { display: block; border-bottom: 0 solid; }
 
 .grid-2 .griditem { width: 240px; }
 
-.grid-1 .griditem { width: 120px; }
+.grid-1 .griditem { width: 120px; font-size: 12px; line-height: 15px; font-weight: normal; }
+
+.media { overflow: hidden; margin-bottom: 10px; }
+.media * { margin: 0; }
+.media img { float: left; margin-right: 10px; }
+.media .media-body { float: left; padding: 20px 20px 20px 0; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 SEARCHFORM
@@ -274,11 +366,27 @@ SEARCHFORM
 /*//////////////////////////////////////////////////////////////////////////////
 CONTACTFORM
 //////////////////////////////////////////////////////////////////////////////*/
-.webform-client-form-82 { position: relative; }
+.webform-client-form-82 { position: relative; height: 183px; }
+.webform-client-form-82 input, .webform-client-form-82 textarea { padding: 4px; border: none; }
+.webform-client-form-82 .form-item { margin-bottom: 5px; }
 .webform-client-form-82 .webform-component { width: 220px; }
-.webform-client-form-82 .webform-component-textarea { position: absolute; top: 0; right: 100px; width: 360px; }
-.webform-client-form-82 .webform-submit { position: absolute; top: 20px; right: 0; background: #ffae03; color: #704800; }
+.webform-client-form-82 .webform-component-textarea { position: absolute; top: 0; right: 0px; width: 330px; }
+.webform-client-form-82 .webform-component-textarea textarea { height: 143px; }
+.webform-client-form-82 .webform-submit { position: absolute; bottom: 0; left: 0; width: 100px; background: #ffae03; color: #704800; padding: 10px; }
 .webform-client-form-82 .webform-submit:hover { background: #ffbe36; color: black; }
+
+.webform-client-form-98 { margin-top: 20px; }
+
+.webform-client-form-99 .webform-component--vorname { float: left; width: 50%; padding-right: 10px; }
+.webform-client-form-99 .webform-component--nachname { float: left; width: 50%; padding-left: 10px; }
+.webform-client-form-99 .webform-component--e-mail { float: left; width: 50%; padding-right: 10px; }
+.webform-client-form-99 .webform-component--telefon { float: left; width: 50%; padding-left: 10px; }
+.webform-client-form-99 .webform-component--plz { float: left; width: 30%; padding-right: 10px; }
+.webform-client-form-99 .webform-component--stadt { float: left; width: 70%; padding-left: 10px; }
+.webform-client-form-99 .webform-component--welche-wohnbereiche-interessieren-sie { float: right; width: 100%; }
+.webform-client-form-99 .webform-component--welche-wohnbereiche-interessieren-sie label { font-weight: bold; font-size: 15px; line-height: 20px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+.webform-client-form-99 .webform-component--welche-wohnbereiche-interessieren-sie .form-type-checkbox label { display: inline; text-transform: none; font-weight: normal; }
+.webform-client-form-99 .webform-component--welche-wohnbereiche-interessieren-sie .form-type-checkbox.form-item { margin-bottom: 0; float: left; width: 25%; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 GARANTIE
@@ -289,13 +397,32 @@ GARANTIE
 /*//////////////////////////////////////////////////////////////////////////////
 EINRICHTUNGSBEISPIELE
 //////////////////////////////////////////////////////////////////////////////*/
-.einrichtungsbeispiele .view .view-content { margin-left: -10px; width: calc(100% + 20px); }
+.einrichtungsbeispiele .view .view-content { margin-left: -10px; width: calc(100% + 20px); font-size: 0; }
 .einrichtungsbeispiele .view .view-content:after { content: ""; display: table; clear: both; }
-.einrichtungsbeispiele .view .view-content .views-row { float: left; width: 240px; padding: 10px; }
-.einrichtungsbeispiele .view .view-content .views-row a { border: none; }
+.einrichtungsbeispiele .view .view-content .views-row { sfloat: left; font-size: inherit; display: inline-block; vertical-align: top; width: 240px; padding: 10px; }
+.einrichtungsbeispiele .view .view-content .views-row a, .einrichtungsbeispiele .view .view-content .views-row .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .einrichtungsbeispiele .view .view-content .views-row h2 { border: none; }
 .einrichtungsbeispiele .view .view-content .views-row img { margin: 0 0 5px 0; }
 .einrichtungsbeispiele .view .view-content .views-row .views-field-title { font-size: 15px; line-height: 20px; font-weight: normal; text-align: center; }
 .einrichtungsbeispiele .view .view-content .views-row .views-field-field-keywords { font-size: 12px; line-height: 15px; font-weight: normal; text-align: center; }
+
+/*//////////////////////////////////////////////////////////////////////////////
+TABS
+//////////////////////////////////////////////////////////////////////////////*/
+.tabs-container-1, .tabs-container-2 { margin: 0 auto; width: 100%; margin-bottom: 20px; }
+
+ul.tabs { margin: 0; padding: 0; list-style: none; }
+
+ul.tabs li { background: none; display: inline-block; padding: 10px; cursor: pointer; }
+
+ul.tabs li.current { background: #efece5; color: black; }
+
+.tab-content { display: none; background: #efece5; padding: 10px; }
+.tab-content:after { content: ""; display: table; clear: both; }
+.tab-content p, .tab-content figure { margin-bottom: 5px; }
+
+.tab-content.current { display: inherit; }
+
+.tab-content figure { display: inline-block; width: 80px; vertical-align: top; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 
@@ -307,7 +434,7 @@ em:   |----8|---16|---24|---32|---40|---48|---56|---64|---72|---80|---88|---96|
 mq:   mobile: 0-760px ----------------------| tablet: 760px-1000px                  |-----------| desktop small: 1240px-1480px                      |-----------------------| desktop big: >1480px                                                      |--...
 
 //////////////////////////////////////////////////////////////////////////////*/
-.row { position: relative; width: 1480px; margin: 0 auto; padding: 0 20px; }
+.row { position: relative; width: 1480px; height: 100%; margin: 0 auto; padding: 0 20px; }
 .row:after { content: ""; display: table; clear: both; }
 
 .box { padding: 10px; }
@@ -315,7 +442,7 @@ mq:   mobile: 0-760px ----------------------| tablet: 760px-1000px              
 
 .cols:after { content: ""; display: table; clear: both; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-full { float: left; }
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-full, .col-50 { float: left; }
 
 .col-1 { width: 120px; }
 
@@ -340,6 +467,8 @@ mq:   mobile: 0-760px ----------------------| tablet: 760px-1000px              
 .col-11 { width: 1320px; }
 
 .col-full { width: 100%; }
+
+.col-50 { width: 50%; }
 
 .site-header { height: 130px; }
 .site-header:after { content: ""; display: table; clear: both; }
@@ -377,23 +506,25 @@ SECTION SPECIFIC LAYOUT - NAVIGATION
 /* main */
 .site-nav .menu, .site-nav .links { float: right; }
 .site-nav .menu li, .site-nav .links li { float: left; }
-.site-nav .menu li:hover .menu, .site-nav .links li:hover .menu { display: block !important; z-index: 30; }
-.site-nav .menu li:hover a, .site-nav .links li:hover a { background: #fffcfc; color: black; }
-.site-nav .menu li:hover a:hover, .site-nav .links li:hover a:hover { color: #ffae03; }
-.site-nav .menu li.active-trail a, .site-nav .links li.active-trail a { background: #fffcfc; }
+.site-nav .menu li:hover .menu, .site-nav .links li:hover .menu { display: block !important; z-index: 30; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
+.site-nav .menu li:hover a, .site-nav .menu li:hover .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .menu li:hover h2, .site-nav .links li:hover a, .site-nav .links li:hover .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .links li:hover h2 { background: #fffcfc; color: black; }
+.site-nav .menu li:hover a:hover, .site-nav .menu li:hover .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .menu li:hover h2:hover, .site-nav .links li:hover a:hover, .site-nav .links li:hover .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .links li:hover h2:hover { color: #ffae03; }
+.site-nav .menu li.active-trail a, .site-nav .menu li.active-trail .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .menu li.active-trail h2, .site-nav .links li.active-trail a, .site-nav .links li.active-trail .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .links li.active-trail h2 { background: #fffcfc; }
 .site-nav .menu li.active-trail .menu, .site-nav .links li.active-trail .menu { display: block !important; z-index: 30; }
-.site-nav .menu a, .site-nav .links a { background: rgba(255, 255, 255, 0.5); }
+.site-nav .menu a, .site-nav .menu .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .menu h2, .site-nav .links a, .site-nav .links .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .links h2 { background: rgba(255, 255, 255, 0.5); }
 .site-nav .menu .menu { position: absolute; display: none; }
-.site-nav .menu .menu a { padding-right: 0; font-size: 12px; line-height: 15px; font-weight: normal; }
-.site-nav .menu .menu .last a { padding-right: 10px; }
+.site-nav .menu .menu a, .site-nav .menu .menu .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .menu .menu h2 { padding-right: 0; font-size: 12px; line-height: 15px; font-weight: normal; }
+.site-nav .menu .menu .last a, .site-nav .menu .menu .last .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .menu .menu .last h2 { padding-right: 10px; }
+.site-nav .menu .menu a.active, .site-nav .menu .menu .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.active, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-nav .menu .menu h2.active { color: #ffae03; }
 
 /* wohnbereiche */
 .site-sidebar { width: 200px; right: 60px; }
 .site-sidebar h2 { background: #463c3c; color: #fffcfc; }
 .site-sidebar ul { background: #463c3c -webkit-radial-gradient(ellipse at top left, #6e6464 0%, #463c3c 70%); background: #463c3c radial-gradient(ellipse at top left, #6e6464 0%, #463c3c 70%); }
-.site-sidebar a { padding: 5px 10px !important; color: #fffcfc; }
-.site-sidebar a:hover { background: #463c3c; }
-.site-sidebar a.active-trail { background: #ffae03; }
+.site-sidebar a, .site-sidebar .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-sidebar h2 { padding: 5px 10px !important; color: #fffcfc; }
+.site-sidebar a:hover, .site-sidebar .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-sidebar h2:hover { background: #463c3c; color: #ffae03; }
+.site-sidebar a.active-trail, .site-sidebar .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.active-trail, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-sidebar h2.active-trail { background: #ffae03; }
+.site-sidebar a.active-trail:hover, .site-sidebar .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.active-trail:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-sidebar h2.active-trail:hover { color: black; }
 .site-sidebar .block-title { padding: 10px; }
 
 .node-type-seite .site-sidebar .menu, .node-type-landing-page-produkt .site-sidebar .menu { display: none; }
@@ -403,10 +534,12 @@ SECTION SPECIFIC LAYOUT - NAVIGATION
 /* produkte */
 .nav-produkte { margin-bottom: 40px; }
 .nav-produkte li { float: none; }
-.nav-produkte a { padding: 0px 10px !important; }
+.nav-produkte a, .nav-produkte .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .nav-produkte h2 { padding: 0px 10px !important; }
 .nav-produkte ul ul { display: none; }
-.nav-produkte ul ul a { padding-left: 20px !important; }
+.nav-produkte ul ul a, .nav-produkte ul ul .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .nav-produkte ul ul h2 { padding-left: 20px !important; }
+.nav-produkte ul .active-trail ul { display: block; }
 .nav-produkte .block-title { margin-bottom: 0 !important; padding: 10px; }
+.nav-produkte a.active, .nav-produkte .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.active, .einrichtungsbeispiel-taxonomies .field-type-entityreference .nav-produkte h2.active { color: #ffae03; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 SECTION SPECIFIC LAYOUT - TEASER
@@ -418,23 +551,32 @@ SECTION SPECIFIC LAYOUT - TEASER
 .site-teaser-intro .call-to-action { position: absolute; bottom: 20px; right: 20px; left: 30px; z-index: 20; }
 .site-teaser-intro .field-name-field-teaser-call-to-action-sub { padding: 10px 10px 0 10px; max-width: 360px; }
 .site-teaser-intro .flower { display: block; position: absolute; right: -60px; bottom: -60px; z-index: 10; pointer-events: none; }
+.site-teaser-intro .btn, .site-teaser-intro .meta li a, .meta li .site-teaser-intro a, .site-teaser-intro .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .meta li .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-teaser-intro h2, .site-teaser-intro .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .meta li .site-teaser-intro h2 { margin-bottom: 10px; }
 
-.site-teaser-main, .site-teaser-main-produkt { float: right; width: 980px; height: 490px; margin-right: -20px; position: relative; }
-.site-teaser-main figure, .site-teaser-main-produkt figure { position: relative; margin: 0; }
-.site-teaser-main figure figcaption, .site-teaser-main-produkt figure figcaption { font-size: 15px; line-height: 20px; font-weight: normal; position: absolute; bottom: 0; left: 0; right: 500px; padding: 0 0 0 60px; color: #fffcfc; background: rgba(0, 0, 0, 0.5); }
-.site-teaser-main figure figcaption a, .site-teaser-main-produkt figure figcaption a { color: #ffae03; }
+.site-teaser-main { width: 980px; height: 490px; float: right; }
+
+.site-teaser-main-produkt { float: left; }
+
+.site-teaser-main, .site-teaser-main-produkt { margin-right: -20px; position: relative; }
+.site-teaser-main figure, .site-teaser-main-produkt figure { position: relative; margin: 0; height: 490px; }
+.site-teaser-main figure figcaption, .site-teaser-main-produkt figure figcaption { font-size: 15px; line-height: 20px; font-weight: normal; position: absolute; bottom: 0; left: 0; width: 360px; padding: 0 0 0 0px; color: #fffcfc; background: #463c3c; abackground: rgba(0, 0, 0, 0.2); }
+.site-teaser-main figure figcaption h2, .site-teaser-main-produkt figure figcaption h2 { margin: 0; }
+.site-teaser-main figure figcaption a, .site-teaser-main figure figcaption .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-teaser-main figure figcaption h2, .site-teaser-main-produkt figure figcaption a, .site-teaser-main-produkt figure figcaption .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-teaser-main-produkt figure figcaption h2 { color: #ffae03; border-color: #ffae03; }
+.site-teaser-main figure figcaption a:hover, .site-teaser-main figure figcaption .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-teaser-main figure figcaption h2:hover, .site-teaser-main-produkt figure figcaption a:hover, .site-teaser-main-produkt figure figcaption .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-teaser-main-produkt figure figcaption h2:hover { color: #fffcfc; border-color: #fffcfc; }
 .site-teaser-main figure figcaption .field, .site-teaser-main-produkt figure figcaption .field { padding: 20px; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 SECTION SPECIFIC LAYOUT - CONTENT
 //////////////////////////////////////////////////////////////////////////////*/
-.site-main { position: relative; background: #fffcfc; }
+.site-main { position: relative; background: #fff; }
 
-.site-content { margin-bottom: 40px; padding-top: 20px; }
+.site-content { margin-bottom: 40px; padding-top: 20px; font-size: 12px; line-height: 15px; font-weight: normal; }
 
 .page-title { margin-bottom: 10px; }
 
 .field-name-field-col-right { margin-bottom: 20px; }
+
+.site-content .content-sidebar { float: right; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 SECTION SPECIFIC LAYOUT - SUB
@@ -443,6 +585,7 @@ SECTION SPECIFIC LAYOUT - SUB
 .site-sub h1, .site-sub p { margin: 0; }
 .site-sub h2 { font-size: 15px; line-height: 20px; font-weight: normal; margin: 0; text-transform: uppercase; font-weight: bold; }
 .site-sub #map-canvas { height: 300px; width: 100%; }
+.site-sub .gmnoprint, .site-sub .gm-style-cc { display: none; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 SECTION SPECIFIC LAYOUT - SUB
@@ -451,15 +594,21 @@ SECTION SPECIFIC LAYOUT - SUB
 .site-subnav .menu { margin: 0; }
 .site-subnav .menu:after { content: ""; display: table; clear: both; }
 .site-subnav .menu li { float: left; }
-.site-subnav .menu li a { color: #ffae03; }
-.site-subnav .menu li a.active { background: black; }
+.site-subnav .menu li a, .site-subnav .menu li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-subnav .menu li h2 { color: #ffae03; }
+.site-subnav .menu li a.active, .site-subnav .menu li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2.active, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-subnav .menu li h2.active { background: black; }
+.site-subnav .menu li a:hover, .site-subnav .menu li .einrichtungsbeispiel-taxonomies .field-type-entityreference h2:hover, .einrichtungsbeispiel-taxonomies .field-type-entityreference .site-subnav .menu li h2:hover { color: #fffcfc; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 SECTION SPECIFIC LAYOUT - FOOTER
 //////////////////////////////////////////////////////////////////////////////*/
-.site-footer { background: #463c3c; color: black; padding: 10px 0 20px 0; }
-.site-footer input, .site-footer textarea { background: #463c3c; color: #d8d3ca; border-color: black; }
+.site-footer { background: #463c3c; color: black; padding: 30px 0 50px 0; }
+.site-footer input, .site-footer textarea { background: #2b2424; color: #d8d3ca; border-color: black; }
 .site-footer .fa { display: inline-block; width: 20px; }
+.site-footer .site-footer-contact { margin-top: -16px; }
+.site-footer .site-footer-contact * { font-size: 15px; line-height: 20px; font-weight: normal; color: #d8d3ca; }
+.site-footer .site-footer-contact { padding: 10px; position: absolute; right: 20px; bottom: 0; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); margin-top: -134px; background: #1d1919; height: 204px; width: 610px; scolor: #d8d3ca; }
+.site-footer .site-footer-contact h2 { margin-bottom: 20px; color: #d8d3ca; position: absolute; top: -30px; font-size: 20px; line-height: 20px; font-weight: bold; }
+.site-footer .site-footer-contact input[type="submit"] { color: black; font-weight: bold; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 PAGE SPECIFIC LAYOUT - FRONTPAGE
@@ -474,14 +623,17 @@ PAGE SPECIFIC LAYOUT - FRONTPAGE
 .view-aktuelles .view-content .views-row .views-field-field-zusammenfassung { font-size: 12px; line-height: 15px; font-weight: normal; }
 .view-aktuelles .view-content .views-row .views-field-field-zusammenfassung p { margin-bottom: 10px; }
 
+.front .site-content .col-4 { padding-top: 50px; }
+
 /*//////////////////////////////////////////////////////////////////////////////
 PAGE SPECIFIC LAYOUT - PRODUKT
 //////////////////////////////////////////////////////////////////////////////*/
-.node-type-landing-page-produkt .col-4 { min-height: 500px; }
+.node-type-landing-page-produkt .col-4 { smin-height: 500px; }
+.node-type-landing-page-produkt .content-sidebar { position: absolute; top: 0; right: 20px; }
 
 .field-name-field-teaser-cta-sub-produkt { padding: 5px 10px 0 10px; max-width: 360px; }
 
-.site-teaser-main-produkt { float: right; margin-right: -20px; margin-top: -20px; position: relative; }
+.site-teaser-main-produkt { margin-right: -20px; margin-top: -20px; position: relative; }
 
 /*//////////////////////////////////////////////////////////////////////////////
 PAGE SPECIFIC LAYOUT - EINRICHTUNGSBEISPIEL
@@ -497,6 +649,30 @@ PAGE SPECIFIC LAYOUT - EINRICHTUNGSBEISPIEL
 
 .field-name-field-spalte-3 { font-size: 12px; line-height: 15px; }
 
-.field-type-taxonomy-term-reference { margin-bottom: 20px; }
+.field-type-taxonomy-term-reference { margin-bottom: 10px; }
 .field-type-taxonomy-term-reference:after { content: ""; display: table; clear: both; }
 .field-type-taxonomy-term-reference .field-items .field-item { float: left; margin-right: 4px; font-size: 12px; line-height: 15px; font-weight: normal; }
+
+.einrichtungsbeispiel-taxonomies h2 { margin-bottom: 10px; font-size: 15px; }
+.einrichtungsbeispiel-taxonomies h3 { margin: 0; font-size: 12px; }
+.einrichtungsbeispiel-taxonomies .field-type-entityreference { margin-bottom: 10px; }
+.einrichtungsbeispiel-taxonomies .field-type-entityreference h2 { margin: 0; font-size: 12px; font-weight: normal; display: inline; }
+.einrichtungsbeispiel-taxonomies .field-type-entityreference .content img { display: none; }
+.einrichtungsbeispiel-taxonomies .field-type-entityreference .content .field-name-field-external-name, .einrichtungsbeispiel-taxonomies .field-type-entityreference .content .field-name-field-external-name-besonderheit, .einrichtungsbeispiel-taxonomies .field-type-entityreference .content .field-name-field-external-name-materialien { display: none; }
+
+.staff { margin-bottom: 40px; }
+.staff:after { content: ""; display: table; clear: both; }
+.staff .media { float: left; width: 50%; }
+
+.referenzen:after { content: ""; display: table; clear: both; }
+.referenzen .media { float: left; width: 50%; font-size: 20px; line-height: 20px; font-weight: bold; font-weight: normal; }
+.referenzen .media-body { float: none; padding: 0; padding-top: 20px; }
+
+.ausfuehrungen { margin-bottom: 40px; }
+.ausfuehrungen:after { content: ""; display: table; clear: both; }
+.ausfuehrungen .media { float: left; width: 50%; }
+.ausfuehrungen .media img { margin-right: 10px; }
+
+.flower { display: none !important; }
+
+.site-teaser-main figcaption { padding-left: 0 !important; }

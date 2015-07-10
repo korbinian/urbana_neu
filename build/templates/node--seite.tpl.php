@@ -20,9 +20,10 @@
 			<div class="col-6">
 				<div class="box">
 					<?php print render($content['field_default_col_right']); ?>	
+					<?php print render($region['subcontent']); ?>
 				</div>
 			</div>
-			<div class="col-2">
+			<div class="col-2 content-sidebar">
 				<nav class="nav-produkte">
 					<?php print render($region['content_sidebar']); ?>
 				</nav>

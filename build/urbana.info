@@ -26,6 +26,7 @@ regions[search] = Search
 regions[sidebar] = Sidebar
 regions[teaser] = Teaser
 regions[content] = Content
+regions[subcontent] = subcontent
 regions[content_secondary] = Content Secondary
 regions[content_blog] = Content Blog
 regions[content_sidebar] = Content Sidebar

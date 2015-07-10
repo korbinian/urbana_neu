@@ -1,9 +1,26 @@
 jQuery(document).ready(function() {
-    jQuery(".field-name-field-details h1").prependTo(".field-name-field-details");
+    var allPanels = jQuery('.article-content').hide();
+
+    jQuery('article').click(function() {
+        jQuery(this).find('.article-content').toggle();
+    });
+
+    jQuery('article h1').click(function() {
+        jQuery(this).toggleClass('open');
+    });
 
 });
 
 
+
+
+/*
+jQuery(document).ready(function() {
+    jQuery(".field-name-field-details h1").prependTo(".field-name-field-details");
+
+});
+
+*/
 /*
 jQuery(document).ready(function() {
 
@@ -36,7 +53,7 @@ function initialize() {
     var mapOptions = {
         scrollwheel: false,
         zoom: 12,
-        center: new google.maps.LatLng(48.110230, 11.715810),
+        center: new google.maps.LatLng(48.112380, 11.715820),
         styles: [{
             "stylers": [{
                 "visibility": "simplified"
@@ -154,3 +171,28 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 google.maps.visualRefresh = true;
+
+
+
+jQuery(document).ready(function() {
+jQuery('.tabs-container-1 ul.tabs li').click(function(){
+    var tab_id = jQuery(this).attr('data-tab');
+
+    jQuery('.tabs-container-1 ul.tabs li').removeClass('current');
+    jQuery('.tabs-container-1 .tab-content').removeClass('current');
+
+    jQuery(this).addClass('current');
+    jQuery(".tabs-container-1 #"+tab_id).addClass('current');
+  })
+
+jQuery('.tabs-container-2 ul.tabs li').click(function(){
+    var tab_id = jQuery(this).attr('data-tab');
+
+    jQuery('.tabs-container-2 ul.tabs li').removeClass('current');
+    jQuery('.tabs-container-2 .tab-content').removeClass('current');
+
+    jQuery(this).addClass('current');
+    jQuery(".tabs-container-2 #"+tab_id).addClass('current');
+  })
+});
+
