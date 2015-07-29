@@ -7,16 +7,9 @@
 				<?php print render($content['field_teaser_cta_front']); ?>
 				<?php print render($content['field_teaser_cta_sub_front']); ?>
 			</div>
-			<img src="http://localhost/urbana/neu/drupal/sites/all/themes/urbana/images/flower.png" alt="" class="flower">
 		</div>
 		<div class="site-teaser-main">
-			<figure>
-				<?php print render($content['field_teaser_image_front']); ?>
-				<figcaption>
-
-					<?php print render($content['field_teaser_image_caption_front']); ?>
-				</figcaption>
-			</figure>
+			<?php print render($region['teaser_main_front']); ?>
 		</div>
 	</div>
 </section>

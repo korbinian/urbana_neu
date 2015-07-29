@@ -1,4 +1,5 @@
 <section class="site-content">
+
 	<div class="row">
 		<div class="cols">
 			<div class="col-full">
@@ -12,6 +13,7 @@
 					<?php print render($title_suffix); ?>
 				</div>
 			</div>
+			
 			<div class="col-4">
 				<div class="box">
 					<?php print render($content['field_default_col_left']); ?>	
@@ -29,7 +31,11 @@
 				</nav>
 				
 			</div>
+			<div class="col-full">
+				<?php print render($region['sub']); ?>
+			</div>
 			
 		</div>
 	</div>
+
 </section>

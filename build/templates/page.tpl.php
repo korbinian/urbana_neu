@@ -61,7 +61,8 @@
 
 
 <nav class="meta">
-    <?php if ($action_links): ?>
+
+        <?php if ($action_links): ?>
     <ul class="action-links">
         <?php print render($action_links); ?>
     </ul>
@@ -70,6 +71,7 @@
     <?php if ($tabs = render($tabs)): ?>
         <?php print $tabs; ?>
     <?php endif; ?>
+
 </nav>
 </main>
 

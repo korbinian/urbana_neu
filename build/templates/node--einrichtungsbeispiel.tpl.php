@@ -19,7 +19,6 @@
 						<?php print render($content['field_spalte_1']); ?>
 						<?php print render($content['field_spalte_2']); ?>
 						<?php print render($content['field_spalte_3']); ?>
-
 					</div>
 
 					<div class="einrichtungsbeispiel-taxonomies">
@@ -40,8 +39,11 @@
 			</div>
 			<div class="col-6">
 				<div class="box">
-					<?php print render($content['field_hauptbild']); ?> 
-					
+					<div class="flexslider flexslider-hauptbild">
+                    	<ul class="slides">
+							<?php print render($content['field_hauptbild']); ?>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -7,7 +7,6 @@
 				<?php print render($content['field_teaser_call_to_action']); ?>
 				<?php print render($content['field_teaser_call_to_action_sub']); ?>
 			</div>
-			<img src="http://localhost/urbana/neu/drupal/sites/all/themes/urbana/images/flower.png" alt="" class="flower">
 		</div>
 		<div class="site-teaser-main">
 			<figure>

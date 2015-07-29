@@ -47,8 +47,6 @@
 </div>
 
 
-
-
 <nav class="meta">
     <?php if ($action_links): ?>
     <ul class="action-links">
@@ -61,50 +59,4 @@
     <?php endif; ?>
 </nav>
 </main>
-
-
-<div class="site-subnav">
-    <div class="row">
-        <?php print render($page['subnav']); ?>
-    </div>
-</div>
-
-
-
-
-<footer class="site-footer">
-    <div class="row">
-        <div class="site-footer-1 col-2">
-            <?php print render($page['footer-1']); ?>
-        </div>
-        <div class="site-footer-2 col-2">
-            <?php print render($page['footer-2']); ?>
-        </div>
-        <div class="site-footer-3 col-2">
-            <?php print render($page['footer-3']); ?>
-        </div>
-        <div class="site-footer-contact col-6">
-            <?php print render($page['footer-contact']); ?>
-        </div>
-    </div>
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -24,12 +24,17 @@ stylesheets[all][] = styles/overrides/ctools.css
 regions[contact] = Contact
 regions[search] = Search
 regions[sidebar] = Sidebar
+
 regions[teaser] = Teaser
+regions[teaser_main_front] = Teaser Main Front
+
 regions[content] = Content
 regions[subcontent] = subcontent
 regions[content_secondary] = Content Secondary
 regions[content_blog] = Content Blog
 regions[content_sidebar] = Content Sidebar
+
+regions[sub] = sub
 regions[subnav] = Subnavigation
 regions[footer-1] = Footer 1
 regions[footer-2] = Footer 2
@@ -40,3 +45,4 @@ regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 
 scripts[] = scripts/script.js
+
